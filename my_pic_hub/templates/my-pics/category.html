@@ -1,0 +1,26 @@
+{% extends 'my-pics/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+
+{% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/my_pics.css' %}">
+{% endblock %}
+
+{% block content %}
+{{block.super}}
+<div class="container" >
+  <h3 style="text-align: center;font-weight: bolder; color: brown;">{{message}} Images</h3>
+  <div class="row" style="background-color:gainsboro;">
+    {% for image in images%}
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+         <a href="{% url 'details' image.id %}"><h4 style="text-align: center;color:purple; font-weight: bolder">{{image.name}}</h4></a>
+        <a href="{% url 'details' image.id %}">
+          <img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px;border:solid 10px black; margin:10px;">
+        </a>
+      </div>  
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}  
