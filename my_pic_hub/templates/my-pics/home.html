@@ -1,0 +1,113 @@
+{% extends 'my-pics/base.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+
+{% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/my_pics.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Great+Vibes|Kaushan+Script|Pacifico" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{{block.super}}
+<div class="container">
+    <div class="row" style="background: url('/media/images/pines.jpg') ;height: 200px; text-align: center; margin-bottom:10px;">
+        <div class="row">
+            <!-- Adding a search form  -->
+            <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-md-4 col-xl-md-4">
+                <form class="navbar-form" role="search" action="{% url 'search' %}" style="margin-top:50px;">
+
+                    <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search Image" name="image">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search" style="color: brown;"></i></button>
+                    </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4">
+            </div>
+        </div>
+        <div class="row">
+            <p style="color:white; margin:20px; font-size:20px;text-align: center; font-family: 'Pacifico', cursive; font-size:35px;">.......<em>A picture is worth a thousand words.</em> </p>
+        </div>
+    </div>  
+    <!-- panel-->      
+    <div class="panel" style="background-color:white ;">
+        <div class="row">
+            <a href="{% url 'categories' 1 %}" style="color:#4d4d4d;">
+                <!-- <img src="/media/images/cat.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+                border:solid 10px white; height: 350px; width:450px; margin:50px;
+                -webkit-transform: rotate(30deg);
+                -moz-transform: rotate(30deg);
+                -o-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                transform: rotate(30deg);
+                 "> -->
+            </a>
+        <div style="margin:150px; margin-left:200px;">
+            <h4 style="margin:50px; color:brown; font-weight: bolder;font-size:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Art</h4>
+            <p >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown; font-size:30px; font-weight:bolder;">..............</span>
+
+                    ART. View them <a href="{% url 'categories' 1%}">here</a>
+                </p>
+        </div>
+        </div> 
+    
+        <div class="row">
+            <a href="{% url 'categories' 2 %}" style="color:#4d4d4d;" >
+                <!-- <img src="/media/images/godspartcile.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+                border:solid 10px white; height: 350px; width:450px; margin:50px;
+                -webkit-transform: rotate(-30deg);
+                -moz-transform: rotate(-30deg);
+                -o-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                transform: rotate(-30deg);
+                 "> -->
+            </a>
+        <div style="margin:150px;">
+            <h4 style="margin:50px; font-weight:bolder; color:green; font-size:35px;">Sneakers</h4>
+            <p><span style="color:green; font-weight: bolder; font-size:30px;">&nbsp;&nbsp;&nbsp;....................</span>SNEAKERS <a href="{% url 'categories' 2%}">here</a></p>
+        </div>
+        </div> 
+
+        <div class="row">
+            <a href="{% url 'categories' 3 %}" style="color:#4d4d4d;" >
+                <!-- <img src="/media/images/imaginedragons.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+                border:solid 10px white; height: 350px; width:450px; margin:50px;
+                -webkit-transform: rotate(30deg);
+                -moz-transform: rotate(30deg);
+                -o-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                transform: rotate(30deg);
+                 "> -->
+            </a>
+        <div style="margin:150px;">
+            <h4 style="margin:50px;font-size:35px;font-weight: bolder;color:brown;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snacks</h4>
+            <p><span style="font-size:30px;font-weight: bolder;color:brown;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....................</span>SNACKS <a href="{% url 'categories' 3 %}">here</a></p>
+        </div>
+        </div> 
+
+        <div class="row">
+            <a href="{% url 'categories' 4 %}" style="color:#4d4d4d;" >
+                <!-- <img src="/media/images/kilimanjaro.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+                border:solid 10px white; height: 350px; width:450px; margin:50px;
+                -webkit-transform: rotate(-30deg);
+                -moz-transform: rotate(-30deg);
+                -o-transform: rotate(-30deg);
+                -ms-transform: rotate(-30deg);
+                transform: rotate(-30deg);
+                 "> -->
+            </a>
+        <div style="margin:150px;">
+            <h4 style="margin:50px;color:green; font-weight: bolder;font-size: 35px;">Musical_Instruments</h4>
+            <p><span style="color:green; font-size:30px; font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....................</span>MUSICAL_INSTRUMENTS.  View them <a href="{% url 'categories' 4 %}">here</a></p>
+        </div>
+        
+</div>
+{% endblock %}
