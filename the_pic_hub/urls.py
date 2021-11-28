@@ -21,4 +21,3 @@ urlpatterns = [
     re_path('',include('my_pic_hub.urls'))
 ]
 
-###imported include  include function allows one to reference another URLconf
