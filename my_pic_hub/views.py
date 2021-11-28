@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
 from .models import Image
+import pyperclip
+
 ###imported Httpresponse  to be responsible for returning a response to a user.
 
 # Create your views here.
@@ -44,3 +46,9 @@ def search(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'my-pics/search.html',{"message":message})
+
+def copyclip(n):
+    domain='https://herokupp.com'
+    path=domain+n
+    full_path=pyperclip.copy(path)
+    return full_path
