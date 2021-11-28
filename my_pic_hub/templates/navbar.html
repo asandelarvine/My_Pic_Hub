@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+<body>
+<nav class="navbar navbar-inverse" style=" border: white; margin:5px;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home' %}" style="color:white;font-weight: bolder;font-family: 'Great Vibes', cursive;">Pic Hub</a>
+    </div>
+    <div class="navbar-right">
+      <h4><a  href="{% url 'all' %}" style="margin:20px;color: white; font-weight:bolder;">All</a></h4>
+    </div>
+
+      <div class="navbar-left ">
+         
+          <ul>
+            <li class="dropdown" style="background-color: gainsboro;" >
+              <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false" style="color:brown;font-weight:bold;">Categories
+                        <span class="caret" style="color:red;" ></span>
+                    </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="{%url 'categories' 1 %}" style="color:brown;">Art</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 2 %}" style="color:brown;">Sneakers</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 3 %}" style="color:brown;">Snacks</a>
+                </li>
+                <li>
+                  <a href="{%url 'categories' 4%}" style="color:brown;">Musical-Instruments</a>
+                </li>
+                <li>
+                  <a href="{%url 'all' %}" style="color:brown;">All Images</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+</body>
+</html>
