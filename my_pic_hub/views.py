@@ -15,13 +15,13 @@ def categories(request,category):
     category_images = Image.get_images_categories(category)
 
     def determine_category(category):
-        if category == '1':
+        if category == '4':
             return 'Art'
-        elif category == '2':
-            return 'Sneakers'
         elif category == '3':
+            return 'Sneakers'
+        elif category == '2':
             return 'Snacks'
-        elif category == '4':
+        elif category == '1':
             return 'Musical_Instruments'
         else:
             return 'All'

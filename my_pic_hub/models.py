@@ -78,13 +78,13 @@ class Image(models.Model):
     @classmethod
     def search_image(cls,category):
         if category =='Art' or 'art':
-            id = 1
-        elif category =='Sneakers' or 'sneakers':
-            id = 2
-        elif category == 'Snacks' or 'snacks':
-            id = 3
-        elif category == 'Musical-Instruments' or 'musical-instruments':
             id = 4
+        elif category =='Sneakers' or 'sneakers':
+            id = 3
+        elif category == 'Snacks' or 'snacks':
+            id = 2
+        elif category == 'Musical-Instruments' or 'musical-instruments':
+            id = 1
         retrieved_images_category = cls.objects.filter(categories = id).all()
         return retrieved_images_category
         

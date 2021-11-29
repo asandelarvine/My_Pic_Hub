@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'the_pic_hub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'larvs_gallery',
+        'NAME': 'larv_gallery',
         'USER': 'access',
     'PASSWORD':'password',
     }
