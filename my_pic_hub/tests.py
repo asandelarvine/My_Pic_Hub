@@ -31,12 +31,12 @@ class ImageTestClass(TestCase):
 
     def test_update_image(self):
         self.image.save_images()
-        self.image.update_image('vincent','new_description','new_image_url')
+        self.image.update_image('Larvine','new_description','new_image_url')
         self.image.save_images()
         updated_name = self.image.name
         update_description = self.image.image_description
         updated_url = self.image.image
-        self.assertTrue(updated_name == 'vincent' and update_description== 'new_description' and updated_url == 'new_image_url')
+        self.assertTrue(updated_name == 'Larvine' and update_description== 'new_description' and updated_url == 'new_image_url')
 
     def test_get_image_by_id(self):
         self.image.save_images()

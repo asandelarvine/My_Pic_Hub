@@ -6,13 +6,14 @@
 {% block styles %}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/my_pics.css' %}">
-<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Great+Vibes|Kaushan+Script|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
+
 {% endblock %}
 
 {% block content %}
 {{block.super}}
-<div class="container">
-    <div class="row" style="background: url('/media/images/pines.jpg') ;height: 200px; text-align: center; margin-bottom:10px;">
+<div class="container" style="background-color: #36EEE0; font-family: 'Joti One'">
+    <div class="row" style="background: url('/pic_hub-virtual-environments/media/images/cam1.webp') ;height: 200px; text-align: center; margin-bottom:10px; font-family: 'Joti One'">
         <div class="row">
             <!-- Adding a search form  -->
             <div class="col-xs-3 col-sm-3 col-md-4 col-lg-md-4 col-xl-md-4">
@@ -33,80 +34,70 @@
             </div>
         </div>
         <div class="row">
-            <p style="color:white; margin:20px; font-size:20px;text-align: center; font-family: 'Pacifico', cursive; font-size:35px;">.......<em>A picture is worth a thousand words.</em> </p>
+            <p style="color:#F51720; margin:20px; font-size:20px;text-align: center; font-family: 'Joti One', cursive; font-size:35px;"><em>Photograph takes an instant out of time,altering life by holding it still.</em> </p>
         </div>
     </div>  
     <!-- panel-->      
-    <div class="panel" style="background-color:white ;">
+    <div class="panel" style="background-color:rgb(54, 1, 1) ;">
         <div class="row">
-            <a href="{% url 'categories' 1 %}" style="color:#4d4d4d;">
-                <!-- <img src="/media/images/cat.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
-                border:solid 10px white; height: 350px; width:450px; margin:50px;
-                -webkit-transform: rotate(30deg);
-                -moz-transform: rotate(30deg);
-                -o-transform: rotate(30deg);
-                -ms-transform: rotate(30deg);
-                transform: rotate(30deg);
-                 "> -->
+            <a href="{% url 'categories' 1 %}" style="color:white;">
+                <img src="/pic_hub-virtual-environments/media/images/art1.jpeg" alt="" style="float:right;box-shadow: 5px 5px 10px 5px ;border:solid 10px white;height:350px;width:450px;margin:50px;
+                font-family: 'Joti One'">
             </a>
         <div style="margin:150px; margin-left:200px;">
-            <h4 style="margin:50px; color:brown; font-weight: bolder;font-size:35px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Art</h4>
+            <h4 style="margin:50px; color:#F8D210; font-weight: bolder;font-size:35px; font-family: 'Joti One'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Art</h4>
             <p >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:brown; font-size:30px; font-weight:bolder;">..............</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#F8D210; font-size:30px; font-weight:bolder;"> .... </span>
 
-                    ART. View them <a href="{% url 'categories' 1%}">here</a>
+                    ART. View them <a href="{% url 'categories' 1 %}">here</a>
                 </p>
         </div>
         </div> 
     
         <div class="row">
-            <a href="{% url 'categories' 2 %}" style="color:#4d4d4d;" >
-                <!-- <img src="/media/images/godspartcile.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 2 %}" style="color:white;" >
+                <img src="/pic_hub-virtual-environments/media/images/sneakers5.jpg" alt="" style="float:right;box-shadow: 5px 5px 10px 5px ;
+                border:solid 10px white; height: 350px; width:450px; margin:50px;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(-30deg);
                 -moz-transform: rotate(-30deg);
                 -o-transform: rotate(-30deg);
                 -ms-transform: rotate(-30deg);
-                transform: rotate(-30deg);
-                 "> -->
+                transform: rotate(-30deg);">
             </a>
         <div style="margin:150px;">
-            <h4 style="margin:50px; font-weight:bolder; color:green; font-size:35px;">Sneakers</h4>
-            <p><span style="color:green; font-weight: bolder; font-size:30px;">&nbsp;&nbsp;&nbsp;....................</span>SNEAKERS <a href="{% url 'categories' 2%}">here</a></p>
+            <h4 style="margin:50px; font-weight:bolder; color:#FA26A0; font-size:35px; font-family: 'Joti One'">Sneakers</h4>
+            <p><span style="color:#FA26A0; font-weight: bolder; font-size:30px;">&nbsp;&nbsp; .... </span>SNEAKERS. View them <a href="{% url 'categories' 2 %}">here</a></p>
         </div>
         </div> 
 
         <div class="row">
-            <a href="{% url 'categories' 3 %}" style="color:#4d4d4d;" >
-                <!-- <img src="/media/images/imaginedragons.jpg" style="float:left;box-shadow: 5px 5px 10px 5px ;
+            <a href="{% url 'categories' 3 %}" style="color:white;" >
+                <img src="/pic_hub-virtual-environments/media/images/snacks1_b61uEno.jpg" alt="" style="float:left;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
-                -webkit-transform: rotate(30deg);
-                -moz-transform: rotate(30deg);
-                -o-transform: rotate(30deg);
-                -ms-transform: rotate(30deg);
-                transform: rotate(30deg);
-                 "> -->
-            </a>
-        <div style="margin:150px;">
-            <h4 style="margin:50px;font-size:35px;font-weight: bolder;color:brown;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snacks</h4>
-            <p><span style="font-size:30px;font-weight: bolder;color:brown;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....................</span>SNACKS <a href="{% url 'categories' 3 %}">here</a></p>
-        </div>
-        </div> 
-
-        <div class="row">
-            <a href="{% url 'categories' 4 %}" style="color:#4d4d4d;" >
-                <!-- <img src="/media/images/kilimanjaro.jpg" style="float:right;box-shadow: 5px 5px 10px 5px ;
                 border:solid 10px white; height: 350px; width:450px; margin:50px;
                 -webkit-transform: rotate(-30deg);
                 -moz-transform: rotate(-30deg);
                 -o-transform: rotate(-30deg);
                 -ms-transform: rotate(-30deg);
-                transform: rotate(-30deg);
-                 "> -->
+                transform: rotate(-30deg);">
             </a>
         <div style="margin:150px;">
-            <h4 style="margin:50px;color:green; font-weight: bolder;font-size: 35px;">Musical_Instruments</h4>
-            <p><span style="color:green; font-size:30px; font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....................</span>MUSICAL_INSTRUMENTS.  View them <a href="{% url 'categories' 4 %}">here</a></p>
+            <h4 style="margin:50px;font-size:35px;font-weight: bolder;color:#F8D210; font-family: 'Joti One'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snacks</h4>
+            <p><span style="font-size:30px;font-weight: bolder;color:#F8D210;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..... </span>SNACKS.  View them <a href="{% url 'categories' 3 %}">here</a></p>
+        </div>
+        </div> 
+
+        <div class="row">
+            <a href="{% url 'categories' 4 %}" style="color:white;" >
+                <img src="/pic_hub-virtual-environments/media/images/Saxophone1.jpg" alt="" style="float:left;box-shadow: 5px 5px 10px 5px ;
+               font-family: 'Joti One'">
+
+            </a>
+        <div style="margin:160px;">
+            <h4 style="margin:50px;color:#FA26A0; font-weight: bolder;font-size: 35px;border:solid 10px white;height:250px;width:350px;margin:50px; font-family: 'Joti One' "> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Musical_Instruments</h4>
+            <p><span style="color:#FA26A0; font-size:30px; font-weight: bolder;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..... </span>MUSICAL_INSTRUMENTS.  View them <a href="{% url 'categories' 4 %}">here</a></p>
+        </div>
         </div>
         
 </div>

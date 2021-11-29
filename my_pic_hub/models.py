@@ -31,8 +31,9 @@ class Image(models.Model):
     image = models.ImageField(upload_to = 'images/')
     name = models.CharField(max_length =30,null= True)
     image_description = models.CharField(max_length =3000)
-    location = models.ForeignKey(Location,on_delete=models.CASCADE,)
+    # location = models.ForeignKey(Location, default="",  on_delete=models.CASCADE,)
     categories = models.ManyToManyField(Category)
+    
 
     def __str__(self):
         return self.name 

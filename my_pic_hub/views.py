@@ -3,8 +3,6 @@ from django.http  import HttpResponse,Http404
 from .models import Image
 import pyperclip
 
-###imported Httpresponse  to be responsible for returning a response to a user.
-
 # Create your views here.
 def index(request):
     all_images = Image.get_images()
