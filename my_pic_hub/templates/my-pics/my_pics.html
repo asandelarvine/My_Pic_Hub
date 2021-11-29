@@ -14,7 +14,7 @@
 {{block.super}}
 <div class="container" >
   <div class="row" style="background-color:rgb(104, 100, 100); font-family: 'Joti One'">
-    {% for image in all_images%}
+    {% for image in all_images %}
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
         <a href="{% url 'details' image.id %}"><img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px; border:solid 10px white;margin-top:5px;">
         <a href="{% url 'details' image.id %}"><h5 style="text-align: center;color:rgb(175, 30, 54);font-weight: bolder;">{{image.name}}</h5></a>
