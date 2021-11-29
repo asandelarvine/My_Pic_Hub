@@ -94,3 +94,10 @@ class Image(models.Model):
         requested_images = Image.objects.filter(location == location).all()
         return requested_images
 
+class Meta:
+        ordering=['name']
+
+        '''
+        saving images to database
+        '''
+
