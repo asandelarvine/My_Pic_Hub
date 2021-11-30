@@ -18,8 +18,8 @@ As a user of the application you will be able to:
 
 1. View different photos that interest you.
 2. Click on a single photo to expand it and also view the details of the photo. The photo details will appear on a modal within the same route as the main page.
-3. Search for different categories of photos. (ie. Travel, Food)
-4. Click on share icon to share the image with any of your social account or alternatively Copy a link to the photo and share with your friends.
+3. Search for different categories of photos. (ie. Sneakers, Art)
+4. Click on share icon to share the image with any of your social account or alternatively Copy a link to the photo and share.
 5. View photos based on the location they were taken or category.
 
 ## Admin Dashboard
@@ -62,7 +62,7 @@ As a user of the application you will be able to:
 
 ## Known Bugs
 
-* There are no known bugs currently but pull requests are allowed incase you spot a bug
+* Location not displaying, but yet to be resolved.
 
 
 ## CONTACTS
@@ -70,10 +70,3 @@ asandelarvine@gmail.com
 
 ## LIVE LINK
 https://larv-gallery-hub.herokuapp.com/
-
-
-## LICENSE 
-
-This project is licensed under the MIT License - see the ## License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) file for details
