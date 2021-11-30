@@ -11,11 +11,22 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-# import cloudinary
-# from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from decouple import config
+import dj_database_url
+import django_heroku
 
 
 from pathlib import Path
+
+cloudinary.config(
+    cloud_name="dtudhghlr",
+    api_key="797848647357532",
+    api_secret="vJ0xnWIasfPaBo-5cdFDSASOtQg",
+    secure=True
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,12 +37,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*rlnpch@$*8g9)xx5s$a&iug&t)6j3%*dh-6pnii!oy_8-bj)r'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+
+MODE = config("MODE", default="dev")
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+
 
 
 # Application definition
@@ -84,14 +98,29 @@ WSGI_APPLICATION = 'the_pic_hub.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'larv_gallery',
-        'USER': 'access',
-    'PASSWORD':'password',
+if config('MODE')=="dev":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD'),
+            'PORT': '',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=config('DATABASE_URL')
+            )
+            }
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+ALLOWED_HOSTS = [
+    'larvs-gallery-hub.herokuapp.com',
+    '127.0.0.1'
+]
 
 
 # Password validation
@@ -147,6 +176,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
+
 
 
 

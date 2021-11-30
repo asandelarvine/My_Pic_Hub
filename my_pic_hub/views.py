@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
 from .models import Image
+
 import pyperclip
 
 # Create your views here.
@@ -45,8 +46,14 @@ def search(request):
         message = "You haven't searched for any term"
         return render(request, 'my-pics/search.html',{"message":message})
 
-def copyclip(n):
-    domain='https://herokupp.com'
-    path=domain+n
-    full_path=pyperclip.copy(path)
-    return full_path
+# def image_location(request,location_name):
+#     location=Location.get_locations()
+#     image= Image.fetch_by_location(location_name)
+#     message = f"{location_name}"
+#     return render(request, 'details.html',{"message":message,"image": image,"location":location})
+
+# def copyclip(n):
+#     domain='https://herokupp.com'
+#     path=domain+n
+#     full_path=pyperclip.copy(path)
+#     return full_path

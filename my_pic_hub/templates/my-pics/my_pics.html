@@ -19,7 +19,8 @@
         <a href="{% url 'details' image.id %}"><img src="{{image.image.url}}" alt="{{image.name}}" class="img-responsive" style="height:200px; width:300px; border:solid 10px white;margin-top:5px;">
         <a href="{% url 'details' image.id %}"><h5 style="text-align: center;color:rgb(175, 30, 54);font-weight: bolder;">{{image.name}}</h5></a>
         </a>
-      </div>  
+      </div> 
+     
     {% endfor %}
   </div>
 </div>

@@ -3,7 +3,28 @@
 
 {% block content %}
 {{block.super}}
+<br><br>
 <div class="container">
+    <div class="copy_link">
+         <!--copy link-->
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
+        <input id="{{requested_image.id}}-url" class="form-control input-md responsive" type="text"
+            value="{{requested_image.image.url}}">
+    </div>
+
+    <button type="button" onclick="copyToClipboard();">Copy</button>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("{{requested_image.id}}-url");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            alert('url copied');
+        }
+    </script>
+    </div>
+    <br><br>
     
     
     <div class="panel" style="height: 500px; background-color: grey; font-family: 'Joti One'"> 
@@ -15,5 +36,6 @@
         <h5 style="text-align: center;"><span style="color:blue; font-weight:bolder;  margin:15px;">Description:</span></h5>
         <p style="margin:10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{requested_image.image_description}}</p> 
     </div>
+
 </div>
 {% endblock %}
